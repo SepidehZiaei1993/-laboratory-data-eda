@@ -1,0 +1,6 @@
+Step,Action,Records_Affected,Rationale
+1. Initial Data Load,Loaded raw dataset,503 records loaded,Initial data assessment
+2. Missing Values,"Identified missing values in BMI (12), Triglycerides (11), Glucose (10), LDL (9), HbA1c (8), HDL (7)",57 missing values across 6 variables,Missing values will be handled during analysis (median imputation for numeric)
+3. Sex Standardization,"Standardized Sex values: M/Male/male → Male, F/Female/female → Female",500 records (after duplicate removal),Categorical consistency requirement from brief
+4. Duplicate Removal,"Removed 3 exact duplicate rows (Patient_IDs: LAB-0239, LAB-0412, and one other)",3 duplicates removed → 500 records remain,Exact duplicates provide no additional information
+5. Implausible Values Check,Flagged records with physiologically implausible values for review,See implausible values output above,Values outside clinical reference ranges flagged but not automatically removed
